@@ -1,0 +1,31 @@
+.ep2 li {
+	transition: 1s;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
+	opacity: 0;
+	transform: translate(0px, 80px);
+	-webkit-transform: translate(0px, 80px);
+	-moz-transform: translate(0px, 80px);
+}
+.sp-title,
+.sp2-left,
+.sp2-right,
+.video-left,
+.video-right{
+  transition: all 1s;
+  opacity: 0;
+  transform: translate(-200px,0px);
+}
+.sp-title{
+  transform: translate(0px,-600px);
+}
+.sp2-right{
+  transform: translate(150px,0px);
+}
+.video-left{
+  transform: translate(-100px,-100px);
+}
+.video-right{
+  transform: translate(100px,-100px);
+}

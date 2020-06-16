@@ -1,0 +1,49 @@
+@charset "utf-8";
+/*导航框架*/
+.head-phone{display: none; width:100%;height:auto;padding-top:0px; position: relative;}
+
+.nav-phone-button{float:right;width:40px;height:40px;position:relative;position:absolute;top:10px;right:5px;z-index:10;cursor:pointer;}
+/*手机菜单按钮*/
+.pbutton-inner{display:block;top:50%;margin-top:-2px;}
+.pbutton-inner, .pbutton-inner::before, .pbutton-inner::after{width:30px;height:4px;background-color:#043883;right:8px;border-radius:4px;position:absolute;transition-property:-webkit-transform;transition-property:transform;transition-property:transform, -webkit-transform;transition-duration:0.15s;transition-timing-function:ease;}
+.pbutton-inner::before, .pbutton-inner::after{content:"";display:block;}
+.pbutton-inner::before{top:-10px;}
+.pbutton-inner::after{bottom:-10px;}
+/* Emphatic Reverse*/
+.pbutton-emphatic-r{overflow:hidden;}
+.pbutton-emphatic-r .pbutton-inner{transition:background-color 0.2s 0.25s ease-in;}
+.pbutton-emphatic-r .pbutton-inner::before{left:0;transition:top 0.05s 0.2s linear, left 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);transition:transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.2s linear, left 0.2s 0.25s ease-in;transition:transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.2s linear, left 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);}
+.pbutton-emphatic-r .pbutton-inner::after{top:10px;right:0;transition:top 0.05s 0.2s linear, right 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);transition:transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.2s linear, right 0.2s 0.25s ease-in;transition:transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.2s linear, right 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);}
+.pbutton-emphatic-r.is-active .pbutton-inner{transition-delay:0s;transition-timing-function:ease-out;background-color:transparent;}
+.pbutton-emphatic-r.is-active .pbutton-inner::before{left:-80px;top:80px;-webkit-transform:translate3d(80px, -80px, 0) rotate(-45deg);transform:translate3d(80px, -80px, 0) rotate(-45deg);transition:left 0.2s ease-out, top 0.05s 0.2s linear, -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);transition:left 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);transition:left 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);}
+.pbutton-emphatic-r.is-active .pbutton-inner::after{right:-80px;top:80px;-webkit-transform:translate3d(-80px, -80px, 0) rotate(45deg);transform:translate3d(-80px, -80px, 0) rotate(45deg);transition:right 0.2s ease-out, top 0.05s 0.2s linear, -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);transition:right 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);transition:right 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);}
+
+
+/*手机菜单导航*/
+.nav-phone{position:absolute;left:0;top:60px;right:0;background:rgba(255,255,255,0.999);overflow:hidden;display:none;border-top:0 !important;z-index:9;width:100%; box-shadow:#eeeeee 0px 1px 2px;}
+.sidebar_active{color:#FFFFFF;background-color:#003781;}
+.menup1-ul .menup1:hover,
+.menup2-ul .menup2:hover,
+.menup1-ul li.open .menup1,
+.menup2-ul .hover,
+.menup3-ul li a:hover{background-color:#043883;color:#ffffff;}
+.menup1-ul .menup1 a{color:#043883;}
+.menup1-ul .menup1:hover a, .menup1-ul li.open .menup1 a,.menup1-ul li.open .menup1 i,.menup1-ul .menup1:hover i,.menup2-ul .menup2:hover a{color:#ffffff;}
+.menup1-ul {margin:0px;width:100%;font-size:14px;line-height: 35px;}
+.menup1-ul .menup1 {height:auto!important;display:block;position:relative;cursor:pointer;-webkit-transition:all 0.4s ease;-o-transition:all 0.4s ease;transition:all 0.4s ease;padding:2px 20px 2px 20px;border-top:1px solid #dddddd;}
+
+.menup1-ul .menup1 i,.menup1-ul .menup2 i{float:right;line-height:20px;color:#043883;font-size:18px;margin-top: 7px;}
+.menup1-ul li i.fa-chevron-down {left:auto;right:12px;font-size:16px;}
+.menup1-ul li.open .menup1 i{-ms-transform:rotate(180deg);-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);transform:rotate(180deg);-o-transform:rotate(180deg)}
+.menup1-ul li.open i.fa-chevron-down {-ms-transform:rotate(180deg);-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);transform:rotate(180deg);-o-transform:rotate(180deg);}
+
+.menup2-ul{font-size:14px;display:none;padding:0px;background: #f4f4f4;}
+.menup2-ul li{cursor:pointer;background-color:rgba(245,245,245,0.3)}
+.menup2-ul li a{padding-left:5px;-webkit-transition:all 0.25s ease;-ms-transition:all 0.25s ease;-moz-transition:all 0.25s ease;-o-transition:all 0.25s ease;transition:all 0.25s ease;color:#043883;}
+.menup2{padding:2px 20px 2px 30px;border-bottom:1px solid #cccccc;border-right:none;border-left:none; overflow:hidden;}
+.menup2 i{float:right;line-height:20px;-webkit-transition:0.5s all ease;-webkit-transform-origin:center center;-moz-transition:0.5s all ease;-moz-transform-origin:center center;-ms-transition:0.5s all ease;-ms-transform-origin:center center;transition:0.5s all ease;transform-origin:center center;-o-transition:0.5s all ease;-o-transform-origin:center center;}
+.menup2:hover i{-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg);}
+.menup3-ul{width:100%;display:none}
+.menup3-ul li{cursor:pointer;background-color:rgba(245,245,245,0.9)}
+.menup3-ul li a{display:block;color:#043883;border-bottom:1px solid #cccccc;font-size:13px; padding-left:60px;height:35px;line-height:35px;}
+.menup3-ul li:last-child a{border-bottom:none;}
